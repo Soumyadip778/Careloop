@@ -1,0 +1,20 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base{body{@apply bg-black text-white font-sans antialiased}*:focus-visible{outline:2px solid #fff;outline-offset:2px}p,li{text-wrap:pretty}h1,h2,h3{text-wrap:balance}}
+@layer components{
+.heading-1{@apply text-4xl font-semibold md:text-6xl}.heading-3{@apply text-2xl font-semibold md:text-4xl}.heading-4{@apply text-3xl font-semibold}.heading-6{@apply text-xl font-semibold}
+.title-2{@apply text-lg font-medium}.title-3{@apply text-base font-medium}.title-4{@apply text-sm font-medium}
+.body-3{@apply text-base}.body-5{@apply text-sm font-medium}.body-6{@apply text-sm}.button-md{@apply text-base font-semibold}.button-sm{@apply text-sm font-semibold}
+.caption-1{@apply text-sm font-medium}.caption-2{@apply text-sm}.caption-3{@apply text-xs font-semibold}
+.t{transition:background-color .3s cubic-bezier(.22,1,.36,1),opacity .3s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.22,1,.36,1)}
+.btn{@apply t button-md inline-flex min-h-[40px] items-center justify-center gap-2 rounded-lg px-3 py-2 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-40}
+.btn-p{@apply bg-white text-black hover:bg-neutral-300}.btn-s{@apply border border-[#313131] bg-[#272727] hover:bg-[#313131]}.btn-d{@apply border border-[#313131] bg-[#272727] text-red-400 hover:bg-[#313131]}.btn-sm{@apply button-sm min-h-[32px]}
+.card{@apply rounded-2xl border border-[#313131] bg-[#181818] p-6}
+.inp{@apply body-3 min-h-[40px] w-full rounded-lg border border-[#313131] bg-[#272727] px-3 py-2 text-white placeholder:text-neutral-500}
+.lbl{@apply title-4 mb-1 block}.err{@apply caption-2 mt-1 text-red-400}.mut{@apply text-neutral-400}
+.badge{@apply caption-3 inline-block rounded-lg border border-[#313131] bg-[#1F1F1F] px-2 py-0.5}
+.sk{@apply animate-pulse rounded-2xl bg-[#1F1F1F]}
+.nl{@apply t title-4 rounded-lg px-3 py-2 hover:bg-[#272727]}.nl.active{@apply bg-[#313131]}
+.hg{background:linear-gradient(to right,#fff,#9B9B9B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wd{opacity:.3;transition:opacity .5s cubic-bezier(.22,1,.36,1)}.wd.on{opacity:1}
+}
+@media (prefers-reduced-motion:reduce){.wd{opacity:1}*{animation:none!important}}
